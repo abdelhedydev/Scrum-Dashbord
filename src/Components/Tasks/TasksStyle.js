@@ -1,16 +1,9 @@
 import styled from 'styled-components';
 
-const CategoriesStyle = WrappedComponent => styled(WrappedComponent)`
-text-align:center;
-width:10%;
-  .tasks{
-    &__list{
-      margin-top:10px;
-      li{
-        font-size:18px;
-        margin-bottom:6px;
-      }
-    }
+const TasksStyle = WrappedComponent => styled(WrappedComponent)`
+  .tasks__list{
+    width:100%;
+    display:inline-flex;
   }
 `;
-export default CategoriesStyle;
+export default TasksStyle;
