@@ -11,11 +11,7 @@ const Column = ({ className, tasks, status }) => {
     <div className={className}>
       <h2 className="column__title">{status}</h2>
       {
-        map(tasks, (task, index) => (
-          <div key={index}>
-            <Task name={task.name} color={color} />
-          </div>
-        ))
+        map(tasks, (task, index) => <Task key={index} name={task.name} color={color} />)
       }
     </div>
   );
@@ -24,7 +20,7 @@ const Column = ({ className, tasks, status }) => {
 Column.propTypes = {
   className: PropTypes.string,
   status: PropTypes.string,
-  tasks: PropTypes.object,
+  tasks: PropTypes.array,
 };
 
 export default ColumnStyle(Column);
